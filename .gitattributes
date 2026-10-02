@@ -1,0 +1,2 @@
+# 仓库内统一 LF：Windows 上开发也不会把 CRLF 提交进来（否则每次 clone 都在 diff 里吵）
+* text=auto eol=lf

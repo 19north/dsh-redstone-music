@@ -1,0 +1,8 @@
+# pnpm 11 起，`pnpm` 字段不再从 package.json 读取（写了会被忽略并告警），设置统一放这里。
+#
+# 为什么 esbuild 必须放行：tsdown / vitest 依赖 esbuild，而它带安装脚本，
+# pnpm 默认拒绝执行 → `pnpm install` 以 ERR_PNPM_IGNORED_BUILDS 退出码 1 结束。
+# 更麻烦的是 pnpm 在执行任何 `pnpm run <script>` 之前都会先做一次依赖状态检查
+# （内部再跑一次 install），于是 build / test / typecheck 【全部】连带失败。
+allowBuilds:
+  esbuild: true

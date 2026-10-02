@@ -1,0 +1,70 @@
+{
+  "name": "dsh-redstone-music",
+  "version": "0.1.0",
+  "description": "Minecraft redstone-music toolkit: renders SoundFont samples with onset alignment, and compiles a song plus lane table into a scheduled mcfunction datapack (optionally deployed over RCON).",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "examples"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check:listing": "node scripts/check-listing.mjs",
+    "verify:e2e": "node scripts/verify-e2e.mjs",
+    "prepare": "tsdown"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "minecraft",
+    "redstone",
+    "note-block",
+    "datapack",
+    "mcfunction",
+    "midi",
+    "soundfont"
+  ],
+  "homepage": "https://github.com/19north/dsh-redstone-music#readme",
+  "bugs": {
+    "url": "https://github.com/19north/dsh-redstone-music/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19north/dsh-redstone-music.git"
+  },
+  "dependencies": {
+    "tsdown": "^0.22.14",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0",
+    "@deepseek-ai/schemastery": "^3.18.2",
+    "@types/node": "^22.20.1",
+    "vitest": "^3.2.7"
+  },
+  "optionalDependencies": {
+    "js-synthesizer": "^1.13.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "license": "Apache-2.0"
+}

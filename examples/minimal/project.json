@@ -1,0 +1,19 @@
+{
+  "song": {
+    "bpm": 120,
+    "start": 0,
+    "notes": [
+      { "t": 0, "midi": 46, "track": 2 },
+      { "t": 0.25, "midi": 60, "track": 2 },
+      { "t": 0.5, "midi": 40, "track": 2 },
+      { "t": 0, "midi": 36, "track": 1 },
+      { "t": 0.5, "midi": 35, "track": 1 }
+    ]
+  },
+  "lanes": [
+    { "label": "piano-low", "instrument": "piano_low", "block": "minecraft:moss_block", "side": "N", "pos": 1, "window": [40, 52], "sample": 46, "tracks": [2] },
+    { "label": "piano-high", "instrument": "piano_high", "block": "minecraft:mud", "side": "N", "pos": 2, "window": [53, 65], "sample": 59, "tracks": [2] },
+    { "label": "kick", "instrument": "kick", "block": "minecraft:netherite_block", "side": "S", "pos": 1, "window": null, "tracks": [1], "keys": [35, 36], "tune": 12 }
+  ],
+  "geometry": { "originX": 250, "baseY": 180, "walkMid": 520, "laneGap": 5, "tailUnits": 4 }
+}
