@@ -92,6 +92,16 @@ README/站点自动重建，条目进入 npm 包 `dsh-plugin-catalog`，市场�
 
 ---
 
+## 进度记录
+
+- **2026-10-02**：仓库 `19north/dsh-redstone-music` 已建（public）并推送首个提交 `dc84141`（46 个文件）；
+  已加 topic **`dsh-plugin`**；Git Credential Manager 的浏览器授权已通过并存入凭据
+  （本仓库 local 配置 `credential.gitHubAuthModes=browser`，只为让授权走浏览器而不是它的原生对话框）。
+  外部复核（模拟上游 CI）：`raw.githubusercontent.com` 上的 `package.json` 有 `dsh.bundle.patch`、
+  无 `dsh.client`、`repository` 指回本仓库。
+- **待办**：仓库需创建满 1 天 → **2026-10-03 之后**再把本目录的条目 yml 提到
+  `awesome-dsh-plugin/awesome-dsh-plugin`（见上面第 4 节）。可选：`npm publish`。
+
 ## 已知会在市场卡片上披露的能力标签
 
 上游会对安装物做静态扫描并展示 `capabilities`（是披露，不是拒绝）。本插件预期命中：
